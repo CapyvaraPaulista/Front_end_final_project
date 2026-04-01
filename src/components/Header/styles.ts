@@ -1,40 +1,38 @@
 import styled from 'styled-components'
+import BackgroundHeader from '../../assets/Hero.png'
 import { cores } from '../../styles'
 
-export const HeaderBar = styled.header`
-  background-color: ${cores.cinza};
-  padding: 24px;
-  border-radius: 16px;
-  margin-bottom: 80px;
+export const HeaderContainer = styled.header`
+  background-image: url(${BackgroundHeader});
+  background-color: ${cores.salmaoClaro};
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  padding: 40px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 900;
+    font-size: 18px;
+  }
 
   a {
-    color: ${cores.branca};
+    background-color: transparent;
+    color: ${cores.salmao};
     text-decoration: none;
-    font-weight: bold;
   }
 
-  div {
-    display: flex;
-    align-items: center;
-  }
-`
+  @media (max-width: 768px) {
+    padding: 20px 0; // Mais fino no mobile
 
-export const Links = styled.ul`
-  display: flex;
-  margin-left: 40px;
-`
-
-export const LinkItem = styled.li`
-  margin-right: 16px;
-`
-
-export const LinkCart = styled.a`
-  display: flex;
-
-  img {
-    margin-left: 16px;
+    .container {
+      flex-direction: column; // Empilha se o logo for muito grande
+      gap: 16px;
+    }
   }
 `

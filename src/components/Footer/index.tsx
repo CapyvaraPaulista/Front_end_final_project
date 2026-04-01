@@ -1,53 +1,43 @@
-import { Container, FooterSection, Link, Links, SectionTitle } from './styles'
-
-const currentYear = new Date().getFullYear()
+import logo from '../../assets/logo.png'
+import {
+  Centralizador,
+  Copyright,
+  FooterContainer,
+  Logo,
+  SocialLinks
+} from './styles'
+import instagram from '../../assets/instagram.png'
+import facebook from '../../assets/facebook.png'
+import twitter from '../../assets/twitter.png'
 
 const Footer = () => (
-  <Container>
-    <div className="container">
-      <FooterSection>
-        <SectionTitle>Categorias</SectionTitle>
-        <Links>
-          <li>
-            <Link>RPG</Link>
-          </li>
-          <li>
-            <Link>Ação</Link>
-          </li>
-          <li>
-            <Link>Aventura</Link>
-          </li>
-          <li>
-            <Link>Esportes</Link>
-          </li>
-          <li>
-            <Link>Simulação</Link>
-          </li>
-          <li>
-            <Link>Estratégia</Link>
-          </li>
-          <li>
-            <Link>FPS</Link>
-          </li>
-        </Links>
-      </FooterSection>
-      <FooterSection>
-        <SectionTitle>Acesso rápido</SectionTitle>
-        <Links>
-          <li>
-            <Link>Novidades</Link>
-          </li>
-          <li>
-            <Link>Promoções</Link>
-          </li>
-          <li>
-            <Link>Em breve</Link>
-          </li>
-        </Links>
-      </FooterSection>
-      <p>{currentYear} - &copy; E-PLAY Todos os direitos reservados</p>
-    </div>
-  </Container>
+  <FooterContainer>
+    <Centralizador className="container">
+      <Logo src={logo} alt="logo" />
+      <SocialLinks>
+        <li>
+          <a href="#">
+            <img src={instagram} alt="instagram-logo" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src={facebook} alt="facebook-logo" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src={twitter} alt="twitter-logo" />
+          </a>
+        </li>
+      </SocialLinks>
+      <Copyright>
+        A efood é uma plataforma para divulgação de estabelecimentos, a
+        responsabilidade pela entrega, qualidade dos produtos é toda do
+        estabelecimento contratado.{' '}
+      </Copyright>
+    </Centralizador>
+  </FooterContainer>
 )
 
 export default Footer
