@@ -7,7 +7,7 @@ export const HeaderContainer = styled.header`
   background-color: ${cores.salmaoClaro};
   display: flex;
   align-items: center;
-  padding: 40px 0;
+  padding: 86px 0;
   position: sticky;
   top: 0;
   z-index: 100;
